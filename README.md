@@ -31,10 +31,10 @@ This project is intended for:
 ```text
 .
 ├── config
-│   ├── np.backend.hcl
-│   ├── np.tfvars
-│   ├── pr.backend.hcl
-│   └── pr.tfvars
+│   ├── nprod.backend.hcl
+│   ├── nprod.tfvars
+│   ├── prod.backend.hcl
+│   └── prod.tfvars
 │
 ├── backend.tf
 ├── data.tf
@@ -180,21 +180,21 @@ Example environments:
 
 This allows the same Terraform code to be reused across multiple environments.
 
-### np.tfvars
-
-Contains variable values for the non-production environment.
-
-### pr.tfvars
-
-Contains variable values for the production environment.
-
-### np.backend.hcl
+### nprod.backend.hcl
 
 Contains backend configuration for non-production.
 
-### pr.backend.hcl
+### nprod.tfvars
+
+Contains variable values for the non-production environment.
+
+### prod.backend.hcl
 
 Contains backend configuration for production.
+
+### prod.tfvars
+
+Contains variable values for the production environment.
 
 ## Running Terraform
 
@@ -211,7 +211,7 @@ For a local start:
 ```bash
 terraform init -backend=false
 terraform validate
-terraform plan -refresh=false -var-file="./config/np.tfvars"
+terraform plan -refresh=false -var-file="./config/nprod.tfvars"
 ```
 
 For a deployment using local state:
@@ -232,14 +232,14 @@ Create a deployment plan:
 
 ```bash
 terraform plan \
-  -var-file="./config/np.tfvars"
+  -var-file="./config/nprod.tfvars"
 ```
 
 Deploy:
 
 ```bash
 terraform apply \
-  -var-file="./config/np.tfvars"
+  -var-file="./config/nprod.tfvars"
 ```
 
 `backend.tf` and the files under `config/` remain as an optional example for an existing Azure Storage state backend. The backend itself is not created by this example.

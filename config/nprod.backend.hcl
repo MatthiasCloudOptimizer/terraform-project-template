@@ -1,5 +1,5 @@
 resource_group_name  = "rg-tfstate-prod-gwc"
 storage_account_name = "sttfstate089202608"
 container_name       = "tfstate"
-key                  = "webarchitecture/np/terraform.tfstate"
+key                  = "example/nprod/terraform.tfstate"
 subscription_id      = "00000000-0000-0000-0000-000000000000"
