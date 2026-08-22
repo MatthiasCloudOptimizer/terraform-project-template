@@ -175,8 +175,8 @@ The config directory contains environment-specific configuration files.
 
 Example environments:
 
-- Non-Production (NP)
-- Production (PR)
+- Non-Production (NProd)
+- Production (Prod)
 
 This allows the same Terraform code to be reused across multiple environments.
 
@@ -204,7 +204,7 @@ The configuration uses the local Azure CLI session for authentication:
 az login
 ```
 
-The example creates exactly four Azure resources. A storage account is not technically inside a virtual network. Access is restricted with a `Microsoft.Storage` service endpoint and storage network rules on the subnet. Private endpoints, private DNS, and hub peering are intentionally outside this example.
+The example creates exactly four Azure resources. A storage account is not technically inside a virtual network. Access is restricted with a `Microsoft.Storage` service endpoint and storage network rules on the subnet.
 
 For a local start:
 
