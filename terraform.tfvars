@@ -12,10 +12,10 @@ vnet_address_space    = "10.20.0.0/16"
 subnet_address_prefix = "10.20.1.0/24"
 
 # Storage
-account_replication_type = "GRS"
+account_replication_type = "ZRS"
 
 # Tags
 common_tags = {
-  environment = "example"
+  environment = "test"
   source      = "terraform"
 }

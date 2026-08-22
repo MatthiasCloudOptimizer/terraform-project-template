@@ -47,7 +47,7 @@ variable "subnet_address_prefix" {
 variable "account_replication_type" {
   description = "Required - The replication type for the Storage Account. Accepted values are 'LRS', 'GRS', 'RAGRS', 'ZRS', 'GZRS', or 'RZRS'."
   type        = string
-  default     = "GRS"
+  default     = "ZRS"
 
   validation {
     condition     = contains(["LRS", "GRS", "RAGRS", "ZRS", "GZRS", "RZRS"], var.account_replication_type)
