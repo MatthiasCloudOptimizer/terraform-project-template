@@ -31,7 +31,7 @@ Dieses Projekt richtet sich an:
 ```text
 .
 ├── config
-│   ├── nrod.backend.hcl
+│   ├── nprod.backend.hcl
 │   ├── nprod.tfvars
 │   ├── prod.backend.hcl
 │   └── prod.tfvars
@@ -125,7 +125,7 @@ Locals reduzieren Wiederholungen und machen den Code lesbarer.
 
 ### data.tf
 
-Diese Datei bleibt als Erweiterungspunkt für spätere Data Sources erhalten. Das aktuelle Beispiel benötigt keine bestehenden Azure-Ressourcen.
+Diese Datei bleibt als Erweiterungspunkt für spätere Data Sources erhalten.
 
 ---
 
@@ -175,8 +175,8 @@ Der Ordner `config` enthält umgebungsspezifische Konfigurationsdateien.
 
 Beispielumgebungen:
 
-- Non-Production (NP)
-- Production (PR)
+- Non-Production (NProd)
+- Production (Prod)
 
 Dadurch kann derselbe Terraform-Code für mehrere Umgebungen wiederverwendet werden.
 
@@ -204,7 +204,7 @@ Für die Anmeldung wird die lokale Azure CLI verwendet:
 az login
 ```
 
-Das Beispiel erstellt genau vier Azure-Ressourcen. Ein Storage Account liegt technisch nicht innerhalb eines VNets. Der Zugriff wird mit einem `Microsoft.Storage`-Service Endpoint und Storage-Network-Rules auf das Subnet begrenzt. Private Endpoint, Private DNS und Hub-Peering sind nicht Bestandteil dieses Beispiels.
+Das Beispiel erstellt genau vier Azure-Ressourcen. Ein Storage Account liegt technisch nicht innerhalb eines VNets. Der Zugriff wird mit einem `Microsoft.Storage`-Service Endpoint und Storage-Network-Rules auf das Subnet begrenzt.
 
 Für einen lokalen Einstieg:
 
