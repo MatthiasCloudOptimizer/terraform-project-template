@@ -1,0 +1,92 @@
+# ================================
+# Terraform State & Lock Files
+# ================================
+# Diese enthalten sensible Daten und werden lokal/remote verwaltet
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform.lock.hcl
+
+# ================================
+# Terraform Working Directory
+# ================================
+# Provider-Plugins und Module-Cache
+.terraform/
+.terraform.tfstate.lock.info
+
+# ================================
+# Sensitive Variable Files
+# ================================
+# Enthalten echte IDs, Secrets, Subscription-Daten
+#*.tfvars
+#*.tfvars.json
+#terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Ausnahme: Beispiel-Dateien können committed werden
+!*.tfvars.example
+!*.tfvars.sample
+
+# ================================
+# Terraform Crash Logs
+# ================================
+crash.log
+crash.*.log
+
+# ================================
+# Terraform Override Files
+# ================================
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ================================
+# Terraform CLI Config
+# ================================
+.terraformrc
+terraform.rc
+
+# ================================
+# Terraform Plan Files
+# ================================
+*.tfplan
+*.tfplan.*
+
+# ================================
+# IDE & Editor Files
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.DS_Store
+Thumbs.db
+
+
+# ================================
+# Backup & Temporary Files
+# ================================
+*.bak
+*.backup
+*.tmp
+*.log
+.env
+.env.local
+
+# ================================
+# Azure CLI / Authentication
+# ================================
+.azure/
+*.pem
+*.key
+
+# ================================
+# Dokumentations-Artefakte
+# ================================
+# Terraform-docs generiert README, sollte aber versioniert werden
+# (kein Ausschluss nötig)
